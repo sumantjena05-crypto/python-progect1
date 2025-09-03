@@ -1,0 +1,25 @@
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def highest(self):
+        pass
+
+    def legs(self):
+        print('4 legs')
+
+class Dog(Animal):
+    def highest(self):
+        print('2 feet')
+
+class Cat(Animal):
+    def highest(self):
+        print('1 foot')
+
+class Lion(Animal):
+    def highest(self):
+        print('4 feet')
+
+obj = Dog()
+obj.legs()
+obj.highest()
